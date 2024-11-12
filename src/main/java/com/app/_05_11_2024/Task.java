@@ -3,9 +3,7 @@ package com.app._05_11_2024;
 import com.github.javafaker.Faker;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Task {
     /**
@@ -51,6 +49,20 @@ class Person1 {
     public Person1() {
     }
 
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person1 person1 = (Person1) o;
+        return Objects.equals(name, person1.name) && Objects.equals(surName, person1.surName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surName);
+    }
+
     public List<Person1> gen() {
         List<Person1> l = new ArrayList<>();
         Faker faker = new Faker();
@@ -65,7 +77,7 @@ class Person1 {
     }
 
     public static void main(String[] args) {
-        new Person1().gen();
+       new TreeSet<>(Comparator.comparing((Person1 o) -> o.name));
     }
 
 }
