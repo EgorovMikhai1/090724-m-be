@@ -13,11 +13,5 @@ public class Fie3 {
         list.add(17);
         list.add(1);
         list.add(2);
-
-        list.stream()
-                .filter(el -> el % 2 == 0)
-                .distinct()
-                .map(el -> el + "")
-                .forEach(el -> System.out.println(el));
     }
 }
