@@ -71,7 +71,7 @@ class StreamTask2 {
         return null;
     }
 
-    // 12. Найти самый длинный возраст человека.
+    // 12. Найти самого взрослого человека.
     public int task12(List<Person> people) {
         return 0;
     }
