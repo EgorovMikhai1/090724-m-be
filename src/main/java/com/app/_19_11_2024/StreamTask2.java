@@ -8,6 +8,11 @@ import java.util.Optional;
 
 class StreamTask2 {
 
+    public static void main(String[] args) {
+        List<String> strings = List.of("Specific", "Measurable", "Achievable", "Relevant", "Time-bound");
+        System.out.println(strings.stream().map(String::length).toList());
+    }
+
     @Getter
     static class Person {
         String name;
