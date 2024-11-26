@@ -17,7 +17,7 @@ public class GenEx1 {
     }
 }
 
-interface Gen {
+interface Gen<X extends Person> {
     <T extends Person> List<T> get(T[] array);
     List<Object> getO(Object[] array);
 }
