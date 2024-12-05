@@ -24,7 +24,16 @@ public class BReader {
         }
     }
 
+    public double avgRating(List<SData> list) {
+        return list.stream()
+                .mapToInt(el -> (int) el.getValue())
+                .average()
+                .getAsDouble();
+    }
+
     private SData createSDATA(String line) {
+        //1: [Стрим 1], 4.0 => "1,4.0"
+
         return null;
     }
 }
