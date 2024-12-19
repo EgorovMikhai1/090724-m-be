@@ -1,10 +1,14 @@
 package com.app._05_11_2024;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
 public class Person {
 
+    @Getter
     private String name;
+
     private int age;
 
 

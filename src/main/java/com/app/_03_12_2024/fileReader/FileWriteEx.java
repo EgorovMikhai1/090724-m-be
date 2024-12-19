@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileWriteEx {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, RuntimeException {
 
         String s = "Eyewitnesses said it fell onto adjacent homes, " +
                 "which is where most of the victims are thought " +
